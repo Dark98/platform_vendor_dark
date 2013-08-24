@@ -1,0 +1,8 @@
+
+DARK_TARGET_PACKAGE := $(PRODUCT_OUT)/DarkOS-$(ROM_VERSION).zip
+
+.PHONY: bacon
+bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(DARK_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(DARK_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(DARK_TARGET_PACKAGE).md5sum
+	@echo -e "Package complete: $(DARK_TARGET_PACKAGE)" >&2
