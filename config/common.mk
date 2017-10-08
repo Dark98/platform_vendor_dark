@@ -19,6 +19,10 @@ PRODUCT_PACKAGES += \
 # Common Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/dark/overlay/common
 
+# Bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/dark/prebuilt/bootanimation/1080/bootanimation.zip:system/media/bootanimation.zip
+
 # Additional packages
 -include vendor/dark/config/packages.mk
 
