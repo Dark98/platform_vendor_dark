@@ -1,5 +1,12 @@
 PRODUCT_BRAND ?= dark
 
+# DRM
+PRODUCT_COPY_FILES +=  \
+    vendor/dark/prebuilt/vendor/lib/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libwvdrmengine.so \
+    vendor/dark/prebuilt/vendor/bin/hw/android.hardware.drm@1.0-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.0-service.widevine \
+    vendor/dark/prebuilt/vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.0-service.widevine.rc \
+    vendor/dark/prebuilt/vendor/lib/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwvhidl.so
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/dark/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
