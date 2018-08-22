@@ -11,6 +11,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/dark/prebuilt/etc/sysconfig/backup.xml:system/etc/sysconfig/backup.xml
 
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml
+
 # Common Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/dark/overlay/common
 
