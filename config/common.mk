@@ -28,7 +28,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/dark/overlay/common
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/dark/prebuilt/bootanimation/1080/bootanimation.zip:system/media/bootanimation.zip
+    vendor/dark/prebuilt/bootanimation/720p/bootanimation.zip:system/media/bootanimation.zip
 
 # SELinux
 -include vendor/dark/sepolicy/sepolicy.mk
