@@ -11,9 +11,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/dark/prebuilt/etc/sysconfig/backup.xml:system/etc/sysconfig/backup.xml
 
+# Common Overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/dark/overlay/common
+
 # Additional packages
 -include vendor/dark/config/packages.mk
 
 # Versioning
 -include vendor/dark/config/version.mk
 
+# AICP Themes
+include packages/overlays/AICP/product_packages.mk
